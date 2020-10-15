@@ -7,6 +7,7 @@
 body {
   background-color: #669900;
   height: 140vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +20,7 @@ h1, p {
 }
 
 img {
-  border-top: 10px;;
+  border-top: 10px;
   margin: 10px;
 }
 
@@ -46,6 +47,10 @@ img {
   border: 1px solid rgb(15, 49, 19);
 }
 
-.snake {
-  background-color: #003300;
+.snakeColor {
+  background-color: rgb(2, 48, 12);
+}
+
+.food {
+  background-color: #911515;
 }

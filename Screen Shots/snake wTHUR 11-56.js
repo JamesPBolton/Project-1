@@ -85,7 +85,7 @@ start.addEventListener('click', () => {
         snakeBody[i] -= width                   // This needs changing (whole snake moves)
       } else if (direction === 'DOWN') {
         snakeBody[i] += width
-      } 
+      }
       cells[snakeBody[i]].classList.add('snakeColor')
     })
   }, 1200)
@@ -104,30 +104,31 @@ start.addEventListener('click', () => {
 
   // If the snake hits a wall, the game ends
   function endGameWall() {
-    if (cells[snakeBody[0]] === width) {
+    if (snakeBody > width) {
        alert('Game Over!')
-    } else if (cells[snakeBody[0]] === length) {
+    } else if (snakeBody > length) {
        alert('Game Over!')
-    } else if (cells[snakeBody[0]] % width === 0) {
+    } else if (snakeBody % width === 0) {
        alert('Game Over!')
-    } else if (cells[snakeBody[0]] % length === 0) {
+    } else if (snakeBody % length === 0) {
        alert('Game Over!')
     }
     clearInterval(interval)
     //gamePlay = confirm('Play Again?')
     //window.location.reload()
+    //return
   }
 })
 
 // If snake hits itself, game ends
-// function contact() {
-//  for (i = 0; i < snakeBody.length; i++) {
-//    if (snake.indexOf(snake[i]) !== snake.lastIndexOf(snake[i])) {
-//      clearInterval(interval)
-//  return alert("Game Over!")
+// function endGameHit() {
+//  if any part of snake array === any part of snake array
+//  clearInterval(interval)
+//  then return alert("Game Over!")
+//  return
 //  and Reset the game
 //  window.location.reload()
-// }
+//}
 
 // Game Loop if required ??
 // let play = true

@@ -6,7 +6,7 @@ let snakeBody = [90, 91, 92]                    // The snake array and its start
 let food = 1                                    // Default starting point of the food
 const cells = []                                // The cells array (divs)
 const start = document.querySelector('#start')  // Start button
-let direction = 'RIGHT'                         // Used to direct the snake once it's going
+let direction = 'LEFT'                         // Used to direct the snake once it's going
 
 // Create the grid and push it to an array of cells
 for (let i = 0; i < width ** 2; i++) {
@@ -24,7 +24,7 @@ start.addEventListener('click', () => {
   cells[food].classList.remove('food')        // Food goes on the grid
   food = Math.floor(Math.random() * 400)
   cells[food].classList.add('food')
-
+  
   document.addEventListener('keypress', (event) => {    // User controls direction of snake
     const key = event.key
     if (key === 'w' && !(snakeBody < width)) {
@@ -74,7 +74,7 @@ start.addEventListener('click', () => {
     }
   })
 
-  const snakeMove = setInterval(() => {        // Snake continues to move and follows direction
+  const snakeMove = setInterval(() => {         // Snake continues to move and follows direction
     snakeBody.forEach((tile, i) => {
       cells[snakeBody[i]].classList.remove('snakeColor') 
       if (direction === 'RIGHT') {
@@ -85,49 +85,50 @@ start.addEventListener('click', () => {
         snakeBody[i] -= width                   // This needs changing (whole snake moves)
       } else if (direction === 'DOWN') {
         snakeBody[i] += width
-      } 
+      }
       cells[snakeBody[i]].classList.add('snakeColor')
     })
   }, 1200)
+})
 
   // Makes the snake grow when it meets the food
   function snakeEats() {
-    console.log('hello')
-    if (cells[snakeBody].classList.contains('food')) {
-      console.log('snake eating')
-      snakeBody.unshift(cells.snakeBody)             // Or snakeBody.++ Or snakeBody.unshift()
+    if (cells.matches('.snakeColor', '.food')) {
+      snakeBody.push(cells.snakeBody)             // Or snakeBody.++ Or snakeBody.unshift()
       cells[food].classList.remove('food')
       food = Math.floor(Math.random() * 400)
       cells[food].classList.add('food')
+      console.log(snakeBody.Length)
     }
   }
 
-  // If the snake hits a wall, the game ends
-  function endGameWall() {
-    if (cells[snakeBody[0]] === width) {
-       alert('Game Over!')
-    } else if (cells[snakeBody[0]] === length) {
-       alert('Game Over!')
-    } else if (cells[snakeBody[0]] % width === 0) {
-       alert('Game Over!')
-    } else if (cells[snakeBody[0]] % length === 0) {
-       alert('Game Over!')
-    }
-    clearInterval(interval)
+// If the snake hits a wall, the game ends
+//function endGameWall() {
+//  if (snakeBody > width) {
+//    return alert('Game Over!')
+//  } else if (snakeBody > length) {
+//    return alert('Game Over!')
+//  } else if (snakeBody % width === 0) {
+//    return alert('Game Over!')
+//  } else if (snakeBody % length === 0) {
+//    return alert('Game Over!')
+//  }
+//  clearInterval(interval)
     //gamePlay = confirm('Play Again?')
     //window.location.reload()
-  }
-})
+    //return
+//}
+
 
 // If snake hits itself, game ends
-// function contact() {
-//  for (i = 0; i < snakeBody.length; i++) {
-//    if (snake.indexOf(snake[i]) !== snake.lastIndexOf(snake[i])) {
-//      clearInterval(interval)
-//  return alert("Game Over!")
+// function endGameHit() {
+//  if any part of snake array === any part of snake array
+//  clearInterval(interval)
+//  then return alert("Game Over!")
+//  return
 //  and Reset the game
 //  window.location.reload()
-// }
+//}
 
 // Game Loop if required ??
 // let play = true
