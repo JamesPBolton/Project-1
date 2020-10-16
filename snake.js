@@ -77,7 +77,7 @@ start.addEventListener('click', () => {
     snakeBody.forEach((part) => {
       cells[part].classList.add('snakeColor')
     })
-  }, 500)
+  }, 350)
 })
 
 // Generates food in a random place
