@@ -1,7 +1,4 @@
-![ga_logo](https://i.imgur.com/RBbwUMy.jpg)
-
 General Assembly - Software Engineering Immersive
-
 
 SNAKE GAME 🐍 
 
