@@ -16,20 +16,20 @@ You can play the game via GitHub pages: https://bit.ly/2XvbUGt.
 Brief
 
 The project brief stated that we had to:
-Render a game in the browser
-Have logic for playing the game and for winning
-Include separate HTML / CSS / JavaScript files
-Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles
-Use JavaScript for DOM manipulation
-Use semantic markup for HTML and CSS (adhere to best practices)
+* Render a game in the browser
+* Have logic for playing the game and for winning
+* Include separate HTML / CSS / JavaScript files
+* Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles
+* Use JavaScript for DOM manipulation
+* Use semantic markup for HTML and CSS (adhere to best practices)
 
 
 Technologies Used
 
-HTML
-CSS
-JavaScript (ES6)
-Git and GitHub
+* HTML
+* CSS
+* JavaScript (ES6)
+* Git and GitHub
 
 
 Approach
@@ -54,6 +54,7 @@ Lessons Learned
 
 Many! The hardest part of this was engineering the movement of the snake. Making the entire snake move up, down, left or right was easy but making the snake move in the direction of the snake’s head was much more challenging. The head was the element that needed to respond to the user’s input, not the entire snake body. I used this code to manage the movement:
 
+```js
 const snakeMove = setInterval(() => {			
     snakeBody.forEach((part) => {				
       cells[part].classList.remove('snakeColor')	
@@ -72,6 +73,7 @@ const snakeMove = setInterval(() => {
     })									
   }, 270)									
 })										
+```
 
 I also realised that the arrow keys, which control the snake, actually control the viewport as well and so I had to input some code to stop the keys from doing that.
 
