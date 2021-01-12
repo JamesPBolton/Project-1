@@ -42,8 +42,7 @@ I then looked at how I could code each of these variables, and how to code the o
 
 Screenshot
 
-See PDF file for images.
-
+![game_page](https://i.imgur.com/HrvAgKh.png)
 
 Bugs
 
