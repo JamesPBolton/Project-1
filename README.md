@@ -48,7 +48,7 @@ The game works well but the snake travels through the walls and so I need to spe
 
 Lessons Learned
 
-Many! The hardest part of this was engineering the movement of the snake. Making the entire snake move up, down, left or right was easy but making the snake move in the direction of the snake’s head was much more challenging. The head was the element that needed to respond to the user’s input, not the entire snake body. I used this code to manage the movement:
+Many! There was a lot of rules to incorporate in order to make a complete game. The hardest challenge of this was engineering the movement of the snake. Making the entire snake move up, down, left or right was easy but making the snake move in the direction of the snake’s head was much more challenging. The head was the element that needed to respond to the user’s input, not the entire snake body. I used this code to manage the movement:
 
 ```js
 const snakeMove = setInterval(() => {			
