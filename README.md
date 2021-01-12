@@ -10,7 +10,7 @@ Overview
 
 This was my first project in the General Assembly Software Engineering Immersive course. It followed a fortnight of learning JavaScript. The project was completed on my own in one week.
 
-You can play the game via GitHub pages here.
+You can play the game via GitHub pages: https://bit.ly/2XvbUGt.
 
 
 Brief
@@ -42,7 +42,7 @@ I then looked at how I could code each of these variables, and how to code the o
 
 Screenshot
 
-This is the game page:
+See PDF file for images.
 
 
 Bugs
